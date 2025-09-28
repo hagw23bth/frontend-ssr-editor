@@ -1,16 +1,34 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /**
- * Form to create a new document with title and content.
+ * Formuläret för att skapa ett nytt dokument.
  */
-function DocumentForm({ onSubmit }) {
+function DocumentForm({ onCreated }) {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');s
-  function handleSubmit(e) {
+  const [content, setContent] = useState('');
+  const navigate = useNavigate(); // Skapa navigate-funktionen
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    onSubmit({ title, content });
-    setTitle('');
-    setContent('');
+
+    // Skicka till backend-API
+    const response = await fetch('http://localhost:1337/api/documents', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, content })
+    });
+
+    if (response.ok) {
+      setTitle('');
+      setContent('');
+      if (onCreated) {
+        onCreated();
+      }
+      navigate('/'); // Omdirigera till hem
+    } else {
+      alert('Kunde inte skapa dokument');
+    }
   }
 
   return (
@@ -38,4 +56,5 @@ function DocumentForm({ onSubmit }) {
     </form>
   );
 }
+
 export default DocumentForm;
