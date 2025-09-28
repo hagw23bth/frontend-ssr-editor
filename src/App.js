@@ -24,6 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+      <main>
         <Routes>
           <Route path="/" element={
             <HomePage documents={documents} onCreated={fetchDocuments} />
@@ -31,6 +32,7 @@ function App() {
           <Route path="/view/:id" element={<DocumentViewRoute onUpdate={fetchDocuments} />} />
           <Route path="/edit/:id" element={<DocumentEdit onUpdated={fetchDocuments} />} />
         </Routes>
+      </main>
       <Footer />
     </BrowserRouter>
   );

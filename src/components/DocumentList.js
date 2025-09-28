@@ -8,9 +8,9 @@ function DocumentList({ documents }) {
   return (
     <ul>
       {documents.map(doc => (
-        <li key={doc._id}>
-          {doc.title}{" "}
-          <Link to={`/edit/${doc._id}`}>Redigera</Link>
+        <li key={doc._id} className="doc-list-item">
+        <span>{doc.title}</span>
+        <Link to={`/edit/${doc._id}`}>Redigera</Link>
         </li>
       ))}
     </ul>
