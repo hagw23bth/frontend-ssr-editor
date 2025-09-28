@@ -20,8 +20,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: frontend-ssr-editor
 
       - name: Run tests
         run: npm test -- --watchAll=false
-        working-directory: frontend-ssr-editor
