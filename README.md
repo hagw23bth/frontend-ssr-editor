@@ -72,5 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Länkar till driftsatta applikationerna 
-# frontend: https://hagw23bth.github.io/frontend-ssr-editor 
-#
+# Frontend: 
+# Backend:
+# Databas: MONGO_URI=mongodb+srv://myuser:mypassword@cluster0.dgpna.mongodb.net/ssr-editor?retryWrites=true&w=majority&appName=Cluster0
+# 
