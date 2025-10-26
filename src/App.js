@@ -11,8 +11,10 @@ import HomePage from './pages/HomePage';
 function App() {
   const [documents, setDocuments] = useState([]);
 
+  const API_BASE = process.env.REACT_APP_API_URL || 'https://jsramverk-editor-hagw23-ejdwfcdze7cna8a5.northeurope-01.azurewebsites.net';
+
   function fetchDocuments() {
-    fetch('http://localhost:1337/api/documents')
+    fetch(`${API_BASE}/api/documents`)
       .then(res => res.json())
       .then(data => setDocuments(data.data));
   }
