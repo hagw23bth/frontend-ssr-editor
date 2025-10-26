@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import DocumentEdit from './components/DocumentEdit';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,11 +15,14 @@ function App() {
     process.env.REACT_APP_API_URL ||
     'https://jsramverk-editor-hagw23-ejdwfcdze7cna8a5.northeurope-01.azurewebsites.net';
 
-  useEffect(() => {
-    fetch(`${API_BASE}/api/documents`)
-      .then((res) => res.json())
-      .then((json) => setDocuments(json.data || []))
-      .catch(() => setDocuments([]));
+  const fetchDocuments = useCallback(async () => {
+    try {
+      const res = await fetch(`${API_BASE}/api/documents`);
+      const json = await res.json();
+      setDocuments(json.data || []);
+    } catch (err) {
+      setDocuments([]);
+    }
   }, [API_BASE]);
 
   return (
