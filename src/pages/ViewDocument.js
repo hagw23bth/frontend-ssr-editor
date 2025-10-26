@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { API_BASE } from '../config';
 import DocumentView from '../components/DocumentView';
 
 function DocumentViewRoute() {
@@ -7,10 +8,11 @@ function DocumentViewRoute() {
   const [doc, setDoc] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/documents/${id}`)
+    fetch(`${API_BASE}/api/documents/${id}`)
       .then(res => res.json())
-      .then(data => setDoc(data.data));
-  }, [id]);
+      .then(data => setDoc(data.data))
+      .catch(() => setDoc(null));
+  }, [id, API_BASE]);
 
   return <DocumentView doc={doc} />;
 }

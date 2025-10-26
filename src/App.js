@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useCallback } from 'react';
+import { API_BASE } from './config';
 import DocumentEdit from './components/DocumentEdit';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -10,10 +11,6 @@ import HomePage from './pages/HomePage';
 
 function App() {
   const [documents, setDocuments] = useState([]);
-
-  const API_BASE =
-    process.env.REACT_APP_API_URL ||
-    'https://jsramverk-editor-hagw23-ejdwfcdze7cna8a5.northeurope-01.azurewebsites.net';
 
   const fetchDocuments = useCallback(async () => {
     try {

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { API_BASE } from '../config';
 
 function DocumentEdit({ onUpdated }) {
   const { id } = useParams();
@@ -7,14 +8,14 @@ function DocumentEdit({ onUpdated }) {
   const [doc, setDoc] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/documents/${id}`)
+    fetch(`${API_BASE}/api/documents/${id}`)
       .then(res => res.json())
       .then(data => setDoc(data.data));
   }, [id]);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch(`http://localhost:1337/api/documents/${id}`, {
+    const response = await fetch(`${API_BASE}/api/documents/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: doc.title, content: doc.content })

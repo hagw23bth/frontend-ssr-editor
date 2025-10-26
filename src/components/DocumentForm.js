@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE } from '../config';
 
 /**
  * Formuläret för att skapa ett nytt dokument.
@@ -13,7 +14,7 @@ function DocumentForm({ onCreated }) {
     e.preventDefault();
 
     // Skicka till backend-API
-    const response = await fetch('http://localhost:1337/api/documents', {
+    const response = await fetch(`${API_BASE}/api/documents`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, content })
