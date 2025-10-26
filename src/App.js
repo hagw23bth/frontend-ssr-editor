@@ -1,13 +1,14 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useCallback } from 'react';
-import { API_BASE } from './config';
+import { API_BASE, BASENAME } from './config';
 import DocumentEdit from './components/DocumentEdit';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
 import DocumentViewRoute from './pages/ViewDocument';
 import HomePage from './pages/HomePage';
+
 
 function App() {
   const [documents, setDocuments] = useState([]);
@@ -23,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={BASENAME}>
       <Header />
       <main>
         <Routes>

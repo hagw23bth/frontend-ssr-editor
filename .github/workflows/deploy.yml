@@ -24,7 +24,7 @@ jobs:
   
     - name: Build project
       env:
-        CI: 'false'
+        CI: 'false' # Disable CI mode to not fail on warnings
         REACT_APP_API_URL: https://jsramverk-editor-hagw23-ejdwfcdze7cna8a5.northeurope-01.azurewebsites.net
       run: npm run build
 

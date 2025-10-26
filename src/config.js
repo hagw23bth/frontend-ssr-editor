@@ -4,3 +4,7 @@
 export const API_BASE =
   process.env.REACT_APP_API_URL ||
   'https://jsramverk-editor-hagw23-ejdwfcdze7cna8a5.northeurope-01.azurewebsites.net';
+
+// Browser router basename, public
+export const BASENAME = process.env.PUBLIC_URL || '/';
+
