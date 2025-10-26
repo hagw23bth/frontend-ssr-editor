@@ -20,7 +20,7 @@ function App() {
     } catch (err) {
       setDocuments([]);
     }
-  }, [API_BASE]);
+  }, []);
 
   return (
     <BrowserRouter>
