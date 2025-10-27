@@ -12,7 +12,7 @@ function DocumentViewRoute() {
       .then(res => res.json())
       .then(data => setDoc(data.data))
       .catch(() => setDoc(null));
-  }, [id, API_BASE]);
+  }, [id]);
 
   return <DocumentView doc={doc} />;
 }
