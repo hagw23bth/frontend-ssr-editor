@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/frontend-ssr-editor/dev/static/css/main.1c883d52.css",
-    "main.js": "/frontend-ssr-editor/dev/static/js/main.42996bdc.js",
+    "main.css": "/frontend-ssr-editor/dev/static/css/main.fbfd2393.css",
+    "main.js": "/frontend-ssr-editor/dev/static/js/main.267a8060.js",
     "static/js/453.07305b26.chunk.js": "/frontend-ssr-editor/dev/static/js/453.07305b26.chunk.js",
     "index.html": "/frontend-ssr-editor/dev/index.html",
-    "main.1c883d52.css.map": "/frontend-ssr-editor/dev/static/css/main.1c883d52.css.map",
-    "main.42996bdc.js.map": "/frontend-ssr-editor/dev/static/js/main.42996bdc.js.map",
+    "main.fbfd2393.css.map": "/frontend-ssr-editor/dev/static/css/main.fbfd2393.css.map",
+    "main.267a8060.js.map": "/frontend-ssr-editor/dev/static/js/main.267a8060.js.map",
     "453.07305b26.chunk.js.map": "/frontend-ssr-editor/dev/static/js/453.07305b26.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c883d52.css",
-    "static/js/main.42996bdc.js"
+    "static/css/main.fbfd2393.css",
+    "static/js/main.267a8060.js"
   ]
 }
