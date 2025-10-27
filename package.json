@@ -16,7 +16,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "cross-env REACT_APP_API_URL=https://jsramverk-editor-dev-hagw23.azurewebsites.net npm start",
     "build": "react-scripts build",
+    "build:dev": "cross-env PUBLIC_URL=/frontend-ssr-editor/dev REACT_APP_API_URL=https://jsramverk-editor-dev-hagw23.azurewebsites.net npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -41,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "gh-pages": "^6.3.0",
     "jest-environment-jsdom": "^30.2.0",
     "jsdom": "^27.0.0"
