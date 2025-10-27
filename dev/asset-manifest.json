@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/frontend-ssr-editor/dev/static/css/main.db09aa9c.css",
+    "main.js": "/frontend-ssr-editor/dev/static/js/main.42996bdc.js",
+    "static/js/453.07305b26.chunk.js": "/frontend-ssr-editor/dev/static/js/453.07305b26.chunk.js",
+    "index.html": "/frontend-ssr-editor/dev/index.html",
+    "main.db09aa9c.css.map": "/frontend-ssr-editor/dev/static/css/main.db09aa9c.css.map",
+    "main.42996bdc.js.map": "/frontend-ssr-editor/dev/static/js/main.42996bdc.js.map",
+    "453.07305b26.chunk.js.map": "/frontend-ssr-editor/dev/static/js/453.07305b26.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db09aa9c.css",
+    "static/js/main.42996bdc.js"
+  ]
+}
